@@ -28,16 +28,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+  
     return Scaffold(
-      appBar: AppBar(),
+      
+      appBar: AppBar(title: Text('Login Sign Up',textAlign: TextAlign.center,),backgroundColor: Colors.black,),
       body: Container(
-        child: Column(children: [
+        height: double.infinity,
+        width: double.infinity,
+        
+        color: Colors.pink,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
           RaisedButton(onPressed: (){
              Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
-          },child:Text('Sign Up')),
+          },child:Text('Sign Up',style: TextStyle(fontWeight: FontWeight.bold),)),
            RaisedButton(onPressed: (){
              Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn()));
-          },child:Text('Sign In')),
+          },child:Text('Sign In',style: TextStyle(fontWeight: FontWeight.bold)),),
         
         ]),
       ),
